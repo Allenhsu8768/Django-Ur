@@ -16,11 +16,13 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path,include
 
+# 引入視圖類
+from .views import Product_views
+
+
+
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    # 首頁
-    path('',include('Index.urls')),
-    # api 視圖
-    path('api/',include('api.urls')),
+    # api Product_info 
+    path('Product_info/',Product_views.as_view(),name='Product_info')
 ]

@@ -10,23 +10,31 @@
     font-size: 17px;
     border-radius: 3px;
     cursor: pointer;
+    @media screen and (max-width:1360px){
+        display: none;
+    }
     &:hover{
         background: #767264;
     }
 }
 
 .addorder{
-    width: 75%;
+    width: 90%;
     border: 2px solid grey;
     padding: 10px;
     border-radius: 10px;
     margin: 20px auto;
+    text-align: center;
     >.select-product{
         width: 200px;
         height: 30px;
         font-weight: bold;
         margin-right: 15px;
         border-radius: 5px;
+        @media screen and (max-width:1360px){
+            width: 100px;
+            height: 30px;
+        }
     }
     >.product-amount{
         display: inline-block;
@@ -41,6 +49,10 @@
             font-weight: bold;
             font-size: 16px;
             text-align: center;
+            @media screen and (max-width:1360px) {
+                width: 40px;
+                font-size: 14px;
+            }
             &::-webkit-inner-spin-button, &::-webkit-outer-spin-button{
                 -webkit-appearance:none;
                 margin: 0;
@@ -53,6 +65,9 @@
             font-size: 16px;
             border-radius: 5px;
             font-weight: bold;
+            @media screen and(max-width:1360px) {
+                width: 100px;
+            }
         }
         >.isvipcheck{
             margin: 0px 5px 0px 15px;
@@ -80,6 +95,26 @@
         color: #ffffff;
         &:hover{
             background: #767264;
+        }
+    }
+    >.error_contrainer{
+        background-color: lightpink;
+        height: 40px;
+        width: 70%;
+        margin: 10px auto;
+        line-height: 40px;
+        text-align: center;
+        border: 1px dashed red;
+        border-radius: 5px;
+        @media screen and (max-width:850px){
+            width: 100%;
+            font-size: 12px;
+        }
+        >p{
+            display: inline-block;
+            margin: 0px 15px;
+            font-weight: bold;
+            color: red;
         }
     }
 }

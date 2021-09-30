@@ -1,12 +1,14 @@
 <template>
     <div class="main">
         <AddOrder :select_list="select_list"/>
+        <Product_table :select_list="select_list"/>
     </div>
 </template>
 
 <script>
     import axios from 'axios'
     import AddOrder from './AddOrder'
+    import Product_table from './Product_table'
     export default {
         name: 'Main',
         data() {
@@ -16,6 +18,7 @@
         },
         components:{
             AddOrder,
+            Product_table
         },
         mounted() {
             // 掛載完DOM 執行生命週期函數 mounted 請求商品數據

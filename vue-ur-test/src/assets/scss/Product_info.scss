@@ -1,0 +1,37 @@
+$trwitdh:100%;
+
+.Product_info_container{
+    width: 80%; 
+    margin: 0px auto;
+    >h2{
+        margin: 15px 0px;
+    }
+    >.product_table{
+        width: 100%;
+        border: 2px solid gray;
+        border-radius: 5px;
+        >thead{
+            >tr{
+                width: $trwitdh;
+                height: 35px;
+                >th{
+                    width: $trwitdh / 5;
+                    background: grey;
+                    border: 1px solid black;
+                }
+            }
+        }
+        >tbody{
+            >tr{
+                width: $trwitdh;
+                height: 25px;
+                >th{
+                    width: $trwitdh / 5;
+                }
+                &:nth-child(odd){
+                    background: lightgray;
+                }
+            }
+        }
+    }
+}

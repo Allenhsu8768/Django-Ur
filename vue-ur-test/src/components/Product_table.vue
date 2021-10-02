@@ -14,10 +14,13 @@
             <tbody>
                 <tr v-for="product in select_list" :key="product.id">
                     <th>{{product.product_id}}</th>
-                    <th>{{product.stock_prc}}</th>
+                    <th>{{product.stock_pcs}}</th>
                     <th>{{product.price}}</th>
                     <th>{{product.shop_id}}</th>
-                    <th>{{product.vip}}</th>
+                    <th>
+                        <span v-if="product.vip" class="isvip"></span>
+                        <span v-else class="notvip"></span>
+                    </th>
                 </tr>
             </tbody>
         </table>

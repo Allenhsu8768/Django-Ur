@@ -40,6 +40,7 @@
 </template>
 
 <script>
+    import axios from 'axios'
     export default {
         name: 'Addorder',
         data() {
@@ -81,12 +82,30 @@
             },
             // 發送axios 請求後端驗證資訊回傳
             sendordermsg(){
+                // 如果輸入資料驗證成功
                 if(this.checkorder()){
-                    console.log(this.select_product_info)
-                    this.select_product_info.product_id=''
-                    this.select_product_info.product_amount=''
-                    this.select_product_info.customer_id=''
-                    this.select_product_info.isVip = false
+                    axios.post('http://127.0.0.1:8000/api/Addorder/',this.select_product_info)
+                    .then(
+                        res =>
+                            {
+                                // 如果新增訂單成功,調用 main 組件設置綁定事件
+                                if(res.data.status===200){
+                                    this.$bus.$emit('update_select_list',
+                                        {
+                                            'product_id':this.select_product_info.product_id,
+                                            'product_amount':this.select_product_info.product_amount,
+                                        }                                    
+                                    );
+
+                                    // // 將用戶輸入的數據清空
+                                    this.select_product_info.product_id = ''
+                                    this.select_product_info.product_amount = ''
+                                    this.select_product_info.customer_id = ''
+                                    this.select_product_info.isVip = false
+                                }
+                                alert(res.data.msg)
+                            }
+                        )
                 }
             }
         },

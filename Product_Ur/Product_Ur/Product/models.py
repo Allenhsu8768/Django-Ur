@@ -5,7 +5,7 @@ from django.db import models
 
 # 產品表
 class Product(models.Model):
-    stock_prc = models.IntegerField(verbose_name='商品庫存量')
+    stock_pcs = models.IntegerField(verbose_name='商品庫存量')
     price = models.IntegerField(verbose_name='商品價格')
     shop_id = models.CharField(max_length=10,verbose_name='商品隸屬館別')
     vip = models.BooleanField(verbose_name='商品購買權限')

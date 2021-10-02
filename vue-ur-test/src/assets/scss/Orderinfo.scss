@@ -1,0 +1,126 @@
+
+$trwitdh:100%;
+
+//deletebutton
+%deletebutton{
+    height: 30px;
+    background-color: lightcoral;
+    width: 50%;
+    cursor: pointer;
+    font-size: 0.5rem;
+    color: #ffffff;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+
+.Order_info{
+    width: 95%;
+    margin: 15px auto;
+    >h2{
+        margin: 15px 0px;
+    }
+    >.order_table{
+        width: 100%;
+        border: 2px solid gray;
+        border-radius: 5px;
+        >thead{
+            >tr{
+                width: $trwitdh;
+                height: 35px;
+                >th{
+                    width: $trwitdh / 7;
+                    background: grey;
+                    border: 1px solid black;
+                }
+            }
+        }
+        >tbody{
+            >transition-group{
+                
+            }
+            >tr{
+                width: $trwitdh;
+                height: 25px;
+                >th{
+                    width: $trwitdh / 7;
+                    height: 40px;
+                    >.deletebtn_pc{
+                        height: 30px;
+                        background-color: lightcoral;
+                        width: 50%;
+                        cursor: pointer;
+                        font-size: 0.9rem;
+                        color: #ffffff;
+                        font-weight: bold;
+                        border-radius: 5px;
+                        &:hover{
+                            background-color: red;
+                        }
+                        @media screen and(max-width:800px) {
+                            display: none;
+                        }
+                    }
+                    >.deletebtn_mobile{
+                        margin: 0px auto;
+                        display: none;
+                        border: none;
+                        // outline: none;
+                        cursor: pointer;
+                        // height: 20px;
+                        border: 2px solid;
+                        height: 25px;
+                        width: 25px;
+                        border-radius: 100%;
+                        position: relative;
+                        >span{
+                            width: 15px;
+                            display: inline-block;
+                            height: 5px;
+                            border-radius: 7px;
+                            background-color: gray;
+                            vertical-align: middle;
+                            transition: .5s;
+                            &::before{
+                                content: '';
+                                width: 15px;
+                                height: 5px;
+                                display: block;
+                                position: absolute;
+                                background-color: gray;
+                                border-radius: 7px;
+                                transition: .5s;
+                            }
+                        }
+                        @media screen and(max-width:800px) {
+                            display: block;
+                        }
+                        &:hover{
+                            >span{
+                                transform: rotate(45deg);
+                                background-color: red;
+                            }
+                            >span::before{
+                                transform: rotate(90deg);
+                                background-color: red;
+                            }
+                        }
+                    }
+                }
+                &:nth-child(odd){
+                    background: lightgray;
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+

@@ -1,7 +1,20 @@
+
+// th width common
 $trwitdh:100%;
 
+
+
+// span (not vip) common
+%notvipspan{
+    width: 18px;
+    height: 5px;
+    background-color: red;
+    border-radius: 2px;
+}
+
+
 .Product_info_container{
-    width: 80%; 
+    width: 95%; 
     margin: 0px auto;
     >h2{
         margin: 15px 0px;
@@ -27,6 +40,38 @@ $trwitdh:100%;
                 height: 25px;
                 >th{
                     width: $trwitdh / 5;
+                    >.isvip{
+                        display: inline-block;
+                        width: 12px;
+                        height: 5px;
+                        background-color: green;
+                        transform: rotate(45deg);
+                        border-radius: 2px;
+                        margin-right: 8px;
+                        &::before{
+                            content: '';
+                            display: block;
+                            width: 20px;
+                            height: 5px;
+                            position: absolute;
+                            background-color: green;
+                            border-radius: 2px;
+                            transform: rotate(90deg);
+                            right: -8px;
+                            top: -8px;
+                        }
+                    }
+                    >.notvip{
+                        @extend %notvipspan;
+                        display: inline-block;
+                        transform: rotate(45deg);
+                        &::before{
+                            @extend %notvipspan;
+                            content: '';
+                            display: block;
+                            transform: rotate(90deg);
+                        }
+                    }
                 }
                 &:nth-child(odd){
                     background: lightgray;
@@ -35,3 +80,5 @@ $trwitdh:100%;
         }
     }
 }
+
+

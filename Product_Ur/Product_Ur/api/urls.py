@@ -17,12 +17,25 @@ from django.contrib import admin
 from django.urls import path,include
 
 # 引入視圖類
+# Product
 from .views import Product_views
 
+# Order
+from .views import AddOrder_view,Orderinfo_view,Deleteorder_view,Top_view
 
 
 
 urlpatterns = [
     # api Product_info 
-    path('Product_info/',Product_views.as_view(),name='Product_info')
+    path('Product_info/',Product_views.as_view(),name='Product_info'),
+    # api addOrder
+    path('Addorder/',AddOrder_view.as_view(),name='AddOrder'),
+    #api Orderinfo
+    path('Orderinfo/',Orderinfo_view.as_view(),name="order_info"),
+    #api Deleteinfo
+    path('Deleteinfo/',Deleteorder_view.as_view(),name='delete_order'),
+    #api Top_info
+    path('Topinfo/',Top_view.as_view(),name='Top_view'),
+    
 ]
+

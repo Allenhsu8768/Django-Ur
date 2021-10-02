@@ -1,0 +1,65 @@
+// th width common
+$trwitdh:100%;
+
+
+.Top_contaniner{
+    width: 40%;
+    margin: 15px auto;
+    >h2{
+        text-align: center;
+        width: 40%;
+        height: 40px;
+        line-height: 40px;
+        border: 1px solid;
+        margin: 25px auto 15px;
+        background-color: grey;
+        color: #ffffff;
+        border-radius: 15px;
+    }
+    >.Top_table{
+        width: 100%;
+        border: 2px solid gray;
+        border-radius: 5px;
+        >thead{
+            >tr{
+                width: $trwitdh;
+                height: 35px;
+                >th{
+                    width: $trwitdh / 3;
+                    background: grey;
+                    border: 1px solid black;
+                }
+            }
+        }
+        >tbody{
+            >tr{
+                width: $trwitdh;
+                height: 25px;
+                >th{
+                    width: $trwitdh / 3;
+                    >.Top1{
+                        background: url('../assets/img/icons8-trophy-48.png');
+                        display: inline-block;
+                        width: 48px;
+                        height: 48px;
+                    }
+                    >.Top2{
+                        background: url('../assets/img/icons8-second-place-ribbon-48.png');
+                        display: inline-block;
+                        width: 48px;
+                        height: 48px;
+                    }
+                    >.Top3{
+                        background: url('../assets/img/icons8-third-place-ribbon-48.png');
+                        display: inline-block;
+                        width: 48px;
+                        height: 48px;
+                    }
+                }
+                &:nth-child(odd){
+                    background: lightgray;
+                }
+            }
+        }
+    }
+}

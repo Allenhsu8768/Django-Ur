@@ -77,6 +77,11 @@
                 // 修改 select 數量
                 this.select_list.forEach(item=>{
                     if(item.product_id===products.product_id){
+                        if(item.stock_pcs===0){
+                            setTimeout(() => {
+                                alert(`商品:${products.product_id}又有庫存囉!!!`)
+                            },1000);
+                        }
                         item.stock_pcs += qty
                     }
                     // 重新請求 Top 的排序數據

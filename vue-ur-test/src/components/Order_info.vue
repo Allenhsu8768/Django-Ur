@@ -36,6 +36,10 @@
 <script>
     import axios from 'axios'
     import 'animate.css'
+
+    axios.defaults.xsrfHeaderName = 'X-CSRFToken'
+    axios.defaults.xsrfCookieName = 'csrftoken'
+
     export default {
         name: 'OrderInfo',
         props:['order_list'],

@@ -17,6 +17,15 @@ from django.contrib import admin
 from django.urls import path,include
 
 
+# 引入 Salesdata 的定時任務，並啟動任務
+from Salesdata.views import scheduler
+
+
+
+
+
+
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     # 首頁
@@ -24,3 +33,7 @@ urlpatterns = [
     # api 視圖
     path('api/',include('api.urls')),
 ]
+
+
+
+

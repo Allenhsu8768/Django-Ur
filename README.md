@@ -1,10 +1,13 @@
 # Django-Ur
 
 ## 根據需求創建 4個應用:
-api (前端請求的路由api 應用 (利用 restfull-api 撰寫(django-rest-framework)))
-Product(根據應用models, 用於Prodcut 表創建模型類管理)
-Order(根據應用models, 用於Customer_Order表創建模型類管理)
-Salesdata(根據排程,將排程任務寫於 views.py ,再由項目 urls.py 中引入，透過 runserver 新增排程任務到 db 中)
+### 1.api (前端請求的路由api 應用 (利用 restfull-api 撰寫(django-rest-framework)))
+
+### 2.Product(根據應用models, 用於Prodcut 表創建模型類管理)
+
+### 3.Order(根據應用models, 用於Customer_Order表創建模型類管理)
+
+### 4.Salesdata(根據排程,將排程任務寫於 views.py ,再由項目 urls.py 中引入，透過 runserver 新增排程任務到 db 中)
 
 
 

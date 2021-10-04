@@ -15,6 +15,6 @@ Salesdata(根據排程,將排程任務寫於 views.py ,再由項目 urls.py 中�
 
 
 
-## 環境建置: 文件夾中 Backend_environment 檔案  requirements.txt
-## 資料庫匯入:  文件夾中 mySQL_info_import 檔案 Urmart.sql
+### 環境建置: 文件夾中 Backend_environment 檔案  requirements.txt
+### 資料庫匯入:  文件夾中 mySQL_info_import 檔案 Urmart.sql
 
